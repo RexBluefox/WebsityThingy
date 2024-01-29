@@ -1,0 +1,216 @@
+:root {
+    --distance:30px;
+    --timing: 170ms;
+    --duration: 2s;
+}
+  
+body {
+    background-color: #232428;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+}
+#my-name {
+    margin-top:0px;
+    position: fixed;
+    z-index: 5;
+    color: white;
+    font-family: "Inter",sans-serif;
+    font-size: 100px;
+    font-weight: bold;
+    pointer-events: none;
+    /* display: none; */
+}
+.name {
+    transform: translateY(-20px);
+}
+#intro1 {
+    color: white;
+    font-family: "Inter",sans-serif;
+}
+.normal {
+    color: white;
+    font-family: "Inter",sans-serif;
+    position:relative;
+    top: 110px;
+}
+#my-text {
+    font-size: x-large;
+}
+#masterhacker {
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+#masterhacker:hover {
+    background-color: black;
+    text-transform: uppercase;
+    font-weight: bolder;
+    color:green;
+    position: relative;
+}
+
+#casual-friends:hover::before {
+    content: "non-Programmer ";
+    color:red;
+}
+#github-link {
+    color: #2f81f7;
+}
+#links-title{
+    font-size:35px;
+    padding:0%;
+    margin-top:20px;
+    margin-bottom: 20px;;
+    text-decoration: underline;
+}
+#buttons {
+    display:flex;
+}
+#buttons a img {
+    margin-left:10px;
+    overflow: hidden;
+}
+#buttons a img:hover {
+    outline: 3px solid white; 
+}
+#germany-audio{
+    display:none;
+}
+#dvd {
+    display: block;
+    position: absolute;
+    width: 200px;
+    animation: dvdX 5s linear 0s infinite alternate, dvdY 6.3s linear 0s infinite alternate;
+}
+/* #my-name-shadow {
+    background:linear-gradient(#fff, #fff);
+    font-family: "Inter",sans-serif;
+    font-size: 100px;
+    text-decoration:underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 5px;
+    -webkit-background-clip: text;
+    color:transparent;
+} */
+.my-name-shadow {
+    margin-top:0px;
+    background:linear-gradient(#eee, #333);
+    font-family: "Inter",sans-serif;
+    font-size: 100px;
+    -webkit-background-clip: text;
+    color:transparent;
+    font-weight: bold;
+
+}
+#hi {
+    display:block;
+    position:absolute;  
+    top: calc(100vh - 60px);
+    left: calc(100vw - 60px);
+    animation: notify1 10s steps(5,end) infinite;
+    visibility: hidden;
+}
+#name-shadow-container {
+    margin-top:0px;
+    display:flex;
+    position: fixed;
+    z-index: 3;
+}
+#name-shadow-container:hover {
+    .my-name-shadow.one{
+        animation-name: moveY, coloror;
+        animation-duration: var(--duration);
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-direction: normal, alternate;
+        /* animation: moveY var(--duration) infinite linear both; */
+        /* animation: color var(--distance) infinite linear both alternate; */
+    }
+    .my-name-shadow.two{
+        animation-name: moveY, coloror;
+        animation-duration: var(--duration);
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-direction: normal, alternate;
+        animation-delay: calc(var(--timing) * 1);
+    }
+    .my-name-shadow.three{
+        animation-name: moveY, coloror;
+        animation-duration: var(--duration);
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-direction: normal, alternate;
+        animation-delay: calc(var(--timing) * 2);
+    }
+    .my-name-shadow.four{
+        animation-name: moveY, coloror;
+        animation-duration: var(--duration);
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-direction: normal, alternate;
+        animation-delay: calc(var(--timing) * 3);
+    }
+    .my-name-shadow.five{
+        animation-name: moveY, coloror;
+        animation-duration: var(--duration);
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-direction: normal, alternate;
+        animation-delay: calc(var(--timing) * 4);
+    }
+    .my-name-shadow.six{
+        animation-name: moveY, coloror;
+        animation-duration: var(--duration);
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-direction: normal, alternate;
+        animation-delay: calc(var(--timing) * 5);
+    }
+    .my-name-shadow.seven{
+        animation-name: moveY, coloror;
+        animation-duration: var(--duration);
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-direction: normal, alternate;
+        animation-delay: calc(var(--timing) * 6);
+    
+    }
+}
+
+
+@keyframes moveY {
+    25% {
+        transform:translateY(var(--distance));
+    }
+    75% {
+        transform:translateY(calc(var(--distance) * -1));
+    }
+
+}
+@keyframes coloror {
+    0% {
+        background:blue;
+        -webkit-background-clip: text;
+        color:transparent;
+    }
+    100% {
+        background:red;
+        -webkit-background-clip: text;
+        color:transparent;
+    }
+}
+
+@keyframes dvdY {
+    from { top: -40px; } to { top: calc(100vh - 110px); }
+}
+@keyframes dvdX {
+    from { left: 0; } to { left: calc(100vw - 200px); }
+}
+
+@keyframes notify1 {
+    to {
+       visibility: visible;
+    }
+}
+
+
